@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Loading } from "@/components/ui/loading";
+// Removed Loading component import as it does not exist
 import { format } from "date-fns";
 
 const Index = () => {
@@ -94,7 +94,9 @@ const Index = () => {
           </Card>
         </div>
         <div className="col-span-2">
-          <Loading loading={loading}>
+          {loading ? (
+            <div>Loading...</div>
+          ) : (
             <div>
               <h2 className="text-xl mb-4">價格圖表</h2>
               {/* Placeholder for price chart */}
@@ -106,7 +108,7 @@ const Index = () => {
               {/* Placeholder for order log */}
               <div className="h-64 bg-gray-200 rounded-md"></div>
             </div>
-          </Loading>
+          )}
         </div>
       </div>
     </div>
