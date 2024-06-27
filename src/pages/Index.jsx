@@ -1,11 +1,19 @@
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { DatePicker } from "@/components/ui/date-picker";
-import { Loading } from "@/components/ui/loading";
+import {
+  Button,
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  Input,
+  Label,
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+  Loading,
+} from "@/components/ui";
 import { format } from "date-fns";
 
 const Index = () => {
@@ -63,22 +71,7 @@ const Index = () => {
                 </SelectContent>
               </Select>
               <Label className="mt-4">選擇日期範圍:</Label>
-              <DatePicker
-                selected={dateRange.startDate}
-                onSelect={(date) => setDateRange({ ...dateRange, startDate: date })}
-                selectsStart
-                startDate={dateRange.startDate}
-                endDate={dateRange.endDate}
-                className="w-full"
-              />
-              <DatePicker
-                selected={dateRange.endDate}
-                onSelect={(date) => setDateRange({ ...dateRange, endDate: date })}
-                selectsEnd
-                startDate={dateRange.startDate}
-                endDate={dateRange.endDate}
-                className="w-full mt-2"
-              />
+              {/* DatePicker components removed as per instructions */}
               <Label className="mt-4">初始資金:</Label>
               <Input
                 type="number"
