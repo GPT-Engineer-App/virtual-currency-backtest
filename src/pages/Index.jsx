@@ -1,26 +1,11 @@
 import React, { useState } from "react";
-import {
-  Button,
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  Input,
-  Label,
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-  DatePicker,
-  DatePickerTrigger,
-  DatePickerContent,
-  DatePickerInput,
-  DatePickerDay,
-  DatePickerMonth,
-  DatePickerYear,
-  Loading,
-} from "@/components/ui";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { DatePicker } from "@/components/ui/date-picker";
+import { Loading } from "@/components/ui/loading";
 import { format } from "date-fns";
 
 const Index = () => {
